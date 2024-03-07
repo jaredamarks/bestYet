@@ -1,12 +1,9 @@
 package com.promineotech;
 
-
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
-
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +19,6 @@ class TestDemoJUnitTest {
 	public void setUp() throws Exception {
 		testDemo = new TestDemo(); // Create TestDemo object before each test
 	}
-
 	@Test
 	@MethodSource("com.promineotech.TestDemoJUnitTest#argumentsForAddPositive")
 	private void assertThatTwoPositivieNumbersAreAddedCorrectly(int a, int b, int expected, 
@@ -51,7 +47,6 @@ class TestDemoJUnitTest {
 		int result = testDemo.addNumbers(6, 9);
 		assertThat(result).isEqualTo(15);
 	}
-	
 	@Test
     void assertThatNumberSquaredIsCorrect() {
         TestDemo mockDemo = spy(testDemo);
@@ -59,7 +54,6 @@ class TestDemoJUnitTest {
         int fiveSquared = mockDemo.randomNumberSquared();
         assertThat(fiveSquared).isEqualTo(25);
     }
-	
 	@Test
 	private int anyMethod(int i) { // anyMethod returns a single variable
 		testDemo = new TestDemo();
@@ -67,8 +61,6 @@ class TestDemoJUnitTest {
 		return i;
 				
 	}
-	
-
 	public static Stream<Arguments> addPositive() {
 		return Stream.of(
 				Arguments.arguments(2, 4, 6, false),
