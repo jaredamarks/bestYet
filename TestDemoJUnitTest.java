@@ -33,7 +33,6 @@ class TestDemoJUnitTest {
 	@Test
 	private void assertThatPairsOfPositiveNumbersAreAddedCorrectly() {
 		TestDemo testDemo = TestDemo();
-		
 		assertThat(testDemo.addPositive(4, 5)).isEqualTo(9);
 		assertThat(testDemo.addPositive(40, 50)).isEqualTo(90);
 		assertThat(testDemo.addPositive(9, 60)).isEqualTo(69);
@@ -66,7 +65,6 @@ class TestDemoJUnitTest {
 				Arguments.arguments(2, 4, 6, false),
 				Arguments.arguments(5, 3, 8, false),
 				Arguments.arguments(10, 15, 25, false),
-				
 				Arguments.arguments(0, 5, 0, true),
 				Arguments.arguments(2, 0, 0, true),
 				Arguments.arguments(-2, 0, 0, true));
