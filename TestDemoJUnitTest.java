@@ -54,17 +54,9 @@ class TestDemoJUnitTest {
 	
 	@Test
     void assertThatNumberSquaredIsCorrect() {
-        // Step 4-2
-        // Mock the TestDemo class
         TestDemo mockDemo = spy(testDemo);
-
-        // Program the mocked TestDemo object to return 5 when getRandomInt method is called
         doReturn(5).when(mockDemo).getRandomInt();
-
-        // Call the method randomNumberSquared on the mocked TestDemo object
         int fiveSquared = mockDemo.randomNumberSquared();
-
-        // Use assertThat to test that the value returned from randomNumberSquared is equal to 5 squared
         assertThat(fiveSquared).isEqualTo(25);
     }
 	
